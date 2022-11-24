@@ -140,34 +140,34 @@ endif
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXE_OUTPUTS += \
-HVAC_un_hilo_obj.out \
+HVAC_un_hilo_obj_Semifinal.out \
 
 EXE_OUTPUTS__QUOTED += \
-"HVAC_un_hilo_obj.out" \
+"HVAC_un_hilo_obj_Semifinal.out" \
 
 BIN_OUTPUTS += \
-HVAC_un_hilo_obj.hex \
+HVAC_un_hilo_obj_Semifinal.hex \
 
 BIN_OUTPUTS__QUOTED += \
-"HVAC_un_hilo_obj.hex" \
+"HVAC_un_hilo_obj_Semifinal.hex" \
 
 
 # All Target
 all: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
-	@$(MAKE) --no-print-directory -Onone "HVAC_un_hilo_obj.out"
+	@$(MAKE) --no-print-directory -Onone "HVAC_un_hilo_obj_Semifinal.out"
 
 # Tool invocations
-HVAC_un_hilo_obj.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
+HVAC_un_hilo_obj_Semifinal.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 	@echo 'Building target: "$@"'
 	@echo 'Invoking: ARM Linker'
-	"C:/ti_v12/ccs/tools/compiler/ti-cgt-arm_20.2.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --advice:power=none -g --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --gen_func_subsections=on -z -m"HVAC_un_hilo_obj.map" -i"C:/ti/simplelink_msp432p4_sdk_3_40_01_02/source" -i"C:/ti/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packages" -i"C:/ti_v12/ccs/tools/compiler/ti-cgt-arm_20.2.6.LTS/lib" --diag_wrap=off --display_error_number --warn_sections --xml_link_info="HVAC_un_hilo_obj_linkInfo.xml" --rom_model -o "HVAC_un_hilo_obj.out" $(ORDERED_OBJS)
+	"C:/ti_v12/ccs/tools/compiler/ti-cgt-arm_20.2.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --advice:power=none -g --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --gen_func_subsections=on -z -m"HVAC_un_hilo_obj_Semifinal.map" -i"C:/ti/simplelink_msp432p4_sdk_3_40_01_02/source" -i"C:/ti/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packages" -i"C:/ti_v12/ccs/tools/compiler/ti-cgt-arm_20.2.6.LTS/lib" --diag_wrap=off --display_error_number --warn_sections --xml_link_info="HVAC_un_hilo_obj_Semifinal_linkInfo.xml" --rom_model -o "HVAC_un_hilo_obj_Semifinal.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: "$@"'
 	@echo ' '
 
-HVAC_un_hilo_obj.hex: $(EXE_OUTPUTS)
+HVAC_un_hilo_obj_Semifinal.hex: $(EXE_OUTPUTS)
 	@echo 'Building secondary target: "$@"'
 	@echo 'Invoking: ARM Hex Utility'
-	"C:/ti_v12/ccs/tools/compiler/ti-cgt-arm_20.2.6.LTS/bin/armhex" --diag_wrap=off -o "HVAC_un_hilo_obj.hex" $(EXE_OUTPUTS__QUOTED)
+	"C:/ti_v12/ccs/tools/compiler/ti-cgt-arm_20.2.6.LTS/bin/armhex" --diag_wrap=off -o "HVAC_un_hilo_obj_Semifinal.hex" $(EXE_OUTPUTS__QUOTED)
 	@echo 'Finished building secondary target: "$@"'
 	@echo ' '
 

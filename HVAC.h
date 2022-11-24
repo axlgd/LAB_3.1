@@ -41,7 +41,7 @@
 // Definiciones del estado 'normal' de los botones externos a la tarjeta (solo hay dos botones).
 #define GND 0
 #define VCC 1
-#define NORMAL_STATE_EXTRA_BUTTONS VCC  // Aqui se coloca GND o VCC.
+#define NORMAL_STATE_EXTRA_BUTTONS GND  // Aqui se coloca GND o VCC.
 
 // Definiciones Básicas.
 #define ENTRADA 1
@@ -90,7 +90,6 @@ extern boolean HVAC_InicialiceUART (void);
 
 /* Funciones principales. */
 extern void HVAC_ActualizarSalidas(void);
-extern void HVAC_ActualizarEntradas(void);
 uint32_t    GET_LUM1_VALUE(void);
 uint32_t    GET_LUM2_VALUE(void);
 uint32_t    GET_LUM3_VALUE(void);
@@ -104,7 +103,6 @@ extern void HVAC_Cool(void);*/
 
 // Funciones para incrementar o disminuir setpoint.
 extern void HVAC_BotonMenu(void);
-extern bool ChecarBoton(void);
 
 /* Función especial que imprime el mensaje asegurando que no habrá interrupciones y por ende,
  * un funcionamiento no óptimo.                                                             */

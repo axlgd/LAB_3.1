@@ -40,9 +40,7 @@ void *HVAC_Thread(void *arg0)
 
    while(TRUE)
    {
-       HVAC_ActualizarEntradas();
        HVAC_ActualizarSalidas();
        HVAC_PrintState();
-       //HVAC_Heartbeat();
    }
 }

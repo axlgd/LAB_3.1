@@ -5,19 +5,19 @@
 SHELL = cmd.exe
 
 # Each subdirectory must supply rules for building sources it contributes
-build-901785327:
-	@$(MAKE) --no-print-directory -Onone -f Aux_files/subdir_rules.mk build-901785327-inproc
+build-2061385439:
+	@$(MAKE) --no-print-directory -Onone -f Aux_files/subdir_rules.mk build-2061385439-inproc
 
-build-901785327-inproc: ../Aux_files/release.cfg
+build-2061385439-inproc: ../Aux_files/release.cfg
 	@echo 'Building file: "$<"'
 	@echo 'Invoking: XDCtools'
 	"C:/ti/xdctools_3_60_02_34_core/xs" --xdcpath="C:/ti/simplelink_msp432p4_sdk_3_40_01_02/source;C:/ti/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packages;" xdc.tools.configuro -o configPkg -t ti.targets.arm.elf.M4F -p ti.platforms.msp432:MSP432P401R -r debug -c "C:/ti_v12/ccs/tools/compiler/ti-cgt-arm_20.2.6.LTS" "$<"
 	@echo 'Finished building: "$<"'
 	@echo ' '
 
-configPkg/linker.cmd: build-901785327 ../Aux_files/release.cfg
-configPkg/compiler.opt: build-901785327
-configPkg/: build-901785327
+configPkg/linker.cmd: build-2061385439 ../Aux_files/release.cfg
+configPkg/compiler.opt: build-2061385439
+configPkg/: build-2061385439
 
 Aux_files/%.obj: ../Aux_files/%.c $(GEN_OPTS) | $(GEN_FILES) $(GEN_MISC_FILES)
 	@echo 'Building file: "$<"'
